@@ -22,9 +22,9 @@ p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 0)
 # 设置重力，加载模型
 p.setGravity(0, 0, -50)
 p.loadURDF("plane.urdf", useMaximalCoordinates=True)
-startPos = [2, 0, 3]
+startPos = [2, 0, 1]
 robot_id = p.loadURDF("r2d2.urdf",startPos, useMaximalCoordinates=True)
-startPos = [0, 0, 3]
+startPos = [0, 0, 1]
 robot_id_2 = p.loadURDF("r2d2.urdf", startPos, useMaximalCoordinates=True)
 print('robot_id ==================',robot_id)
 print('robot_id_2 ==================',robot_id_2)
@@ -55,14 +55,14 @@ for i in range(1000):
     p.setJointMotorControlArray(
         bodyUniqueId=robot_id_2,
         jointIndices=wheel_joints_indexes_2,
-        controlMode=p.VELOCITY_CONTROL,
+        controlMode=p.TORQUE_CONTROL,
         targetVelocities=[target_v_2 for _ in wheel_joints_indexes_2],
         forces=[max_force_2 for _ in wheel_joints_indexes_2]
     )
     p.setJointMotorControlArray(
         bodyUniqueId=robot_id,
         jointIndices=wheel_joints_indexes,
-        controlMode=p.VELOCITY_CONTROL,
+        controlMode=p.TORQUE_CONTROL,
         targetVelocities=[target_v for _ in wheel_joints_indexes],
         forces=[max_force for _ in wheel_joints_indexes]
     )
@@ -115,7 +115,7 @@ for i in range(1000):
 #         cameraTargetPosition=location
 #     )
 #     time.sleep(1 / 240) 
-# input()
+input()
 
 
 # 断开连接

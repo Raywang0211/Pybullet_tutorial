@@ -17,7 +17,7 @@ p.setGravity(0, 0, -10)
 planeId = p.loadURDF("plane.urdf")
 startPos = [0, 0, 5]
 startOrientation = p.getQuaternionFromEuler([0, 0, 0])
-robot_id = p.loadURDF("husky/husky.urdf", startPos,startOrientation)
+robot_id = p.loadURDF("r2d2.urdf", startPos,startOrientation)
 p.setRealTimeSimulation(1)
 # 输出基本信息
 joint_num = p.getNumJoints(robot_id)  #獲得對應物件的結點數量
