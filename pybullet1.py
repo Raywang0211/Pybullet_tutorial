@@ -26,23 +26,23 @@ print("r2d2的节点数量为：", joint_num)
 print("r2d2的信息：")
 for joint_index in range(joint_num):
     info_tuple = p.getJointInfo(robot_id, joint_index) #獲得該物件指定結點詳細資料
-    print(f"关节序号：{info_tuple[0]}\n\
-            关节名称：{info_tuple[1]}\n\
-            关节类型：{info_tuple[2]}\n\
-            机器人第一个位置的变量索引：{info_tuple[3]}\n\
-            机器人第一个速度的变量索引：{info_tuple[4]}\n\
+    print(f"關節序號：{info_tuple[0]}\n\
+            關節名稱：{info_tuple[1]}\n\
+            關節類型：{info_tuple[2]}\n\
+            機器人第一個位置的變量索引：{info_tuple[3]}\n\
+            機器人第一個速度的變量索引：{info_tuple[4]}\n\
             保留参数：{info_tuple[5]}\n\
-            关节的阻尼大小：{info_tuple[6]}\n\
-            关节的摩擦系数：{info_tuple[7]}\n\
+            關節的阻尼大小：{info_tuple[6]}\n\
+            關節的摩擦系数：{info_tuple[7]}\n\
             slider和revolute(hinge)类型的位移最小值：{info_tuple[8]}\n\
             slider和revolute(hinge)类型的位移最大值：{info_tuple[9]}\n\
-            关节驱动的最大值：{info_tuple[10]}\n\
-            关节的最大速度：{info_tuple[11]}\n\
-            节点名称：{info_tuple[12]}\n\
-            局部框架中的关节轴系：{info_tuple[13]}\n\
-            父节点frame的关节位置：{info_tuple[14]}\n\
-            父节点frame的关节方向：{info_tuple[15]}\n\
-            父节点的索引，若是基座返回-1：{info_tuple[16]}\n\n")
+            關節驅動的最大值：{info_tuple[10]}\n\
+            關節的最大速度：{info_tuple[11]}\n\
+            結點名稱：{info_tuple[12]}\n\
+            局部框架中的關節軸系：{info_tuple[13]}\n\
+            父節點frame的關節位置：{info_tuple[14]}\n\
+            父節點frame的關節方向：{info_tuple[15]}\n\
+            父節點的索引，若是基座返回-1：{info_tuple[16]}\n\n")
 
 
 input()
